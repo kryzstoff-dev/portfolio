@@ -10,9 +10,11 @@ import { useNavigationStore } from "@/providers/NavigationStoreProvider";
 import SidebarContent from "../navigation/SidebarContent";
 import { NavLinkType } from "../navigation/types/navlink.type";
 import { Code, Home, Inbox, User, Settings } from "lucide-react";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const {isOpen, toggleDrawer} = useNavigationStore((state) => state);
+  const {isOpen, toggleDrawer, activeLink, setActiveLink} = useNavigationStore((state) => state);
   const navLinks: NavLinkType[] = [
     { name: "Home", href: "/home", icon: <Home /> },
     { name: "Projects", href: "/projects", icon: <Code /> },
@@ -20,18 +22,25 @@ export default function Navbar() {
     { name: "Services", href: "/services", icon: <Settings /> },
     { name: "Contact", href: "/contact", icon: <Inbox /> },
   ];
+  const activeRoute = usePathname();
 
   const handleDrawerToggle = () => {
     toggleDrawer();
   };
 
+  useEffect(() => {
+    if (activeRoute !== activeLink) {
+      setActiveLink(activeRoute);
+    }
+  }, [activeLink, activeRoute]);
+
   return (
     <AppBar
       position="fixed"
-      className="bg-white/80! backdrop-blur-md border-b border-gray-200 dark:bg-slate-900/80! dark:border-slate-800!"
+      className="bg-slate-50/80! backdrop-blur-md border-b border-gray-200 dark:bg-slate-950/80! dark:border-slate-800!"
       sx={{
         color: "text.primary",
-        backgroundColor: "rgba(255, 255, 255, 0.8)",
+        // backgroundColor: "rgba(255, 255, 255, 0.8)",
         boxShadow: "none",
         "&.MuiAppBar-colorPrimary": {
           color: "inherit",

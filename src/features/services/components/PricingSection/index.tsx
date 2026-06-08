@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
+import { Box, Container, Typography, Grid } from "@mui/material";
 import { pricingPlans } from "@/data/pricing";
 import PricingPlanCard from "./PricingPlanCard";
 
@@ -17,7 +17,7 @@ export default function PricingSection() {
             variant="body1"
             className="text-slate-600 dark:text-slate-400 mx-auto"
           >
-            Choose the plan that best fits your needs. All plans are customizable to suit your specific requirements.
+            Choose the plan that best fits your needs. All plans are negotiable to suit your specific requirements.
           </Typography>
         </Box>
 

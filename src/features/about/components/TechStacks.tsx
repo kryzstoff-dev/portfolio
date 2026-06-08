@@ -11,6 +11,8 @@ const skills = [
   "Prisma",
   "Tailwind CSS",
   "Material UI",
+  "JavaScript",
+  "Laravel",
 ];
 
 function TechStacks() {
@@ -20,7 +22,7 @@ function TechStacks() {
         <Chip
           key={skill}
           label={skill}
-          className="bg-blue-50 text-blue-600 dark:bg-blue-900/30! dark:text-blue-400! border-none font-medium"
+          className="bg-teal-50 text-teal-600 dark:bg-teal-900/30! dark:text-teal-400! border-none font-medium"
         />
       ))}
     </Box>

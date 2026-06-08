@@ -4,8 +4,11 @@ import App from "./App";
 import ThemeRegistry from "@/components/layout/ThemeRegistry";
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
+  title: "Christopher Alonzo",
   description: "Showcasing my professional journey and projects",
+  icons: {
+    icon: "assets/images/profile.jpg",
+  }
 };
 
 export default function RootLayout({
@@ -13,14 +16,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-    <html
-      lang="en"
-      className="h-full antialiased"
-      suppressHydrationWarning
-    >
-      <body className="min-h-full flex flex-col bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col text-slate-900 dark:text-white bg-slate-100! dark:bg-slate-950!">
         <ThemeRegistry>
           <App>{children}</App>
         </ThemeRegistry>

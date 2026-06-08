@@ -22,12 +22,12 @@ function PricingPlanCard({ plan }: { plan: PricingPlanType }) {
         className={clsx(
           "p-6 md:p-8 border border-gray-200 dark:border-slate-800 bg-white! dark:bg-slate-900! rounded-2xl h-100% transition-transform duration-300",
           plan.recommended
-            ? "border-2 border-blue-500 dark:border-blue-400"
+            ? "border-2 border-teal-500 dark:border-teal-400"
             : "",
         )}
       >
         {plan.recommended && (
-          <Box className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+          <Box className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-medium">
             Most Popular
           </Box>
         )}
@@ -63,7 +63,7 @@ function PricingPlanCard({ plan }: { plan: PricingPlanType }) {
             <Box key={featureIndex} className="flex items-start mb-2">
               <Typography
                 variant="body2"
-                className="shrink-0 text-blue-500 dark:text-blue-400 mr-2 mt-0.5"
+                className="shrink-0 text-teal-500 dark:text-teal-400 mr-2 mt-0.5"
               >
                 •
               </Typography>

@@ -10,7 +10,7 @@ export default function ThemeRegistry({ children }: { children: React.ReactNode 
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="dark"
       enableColorScheme={false}
     >
       <AppRouterCacheProvider>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import ProjectCard from '@/features/projects/components/ProjectCard';
 import { projects } from '@/data/projects';
 
@@ -11,25 +11,25 @@ export default function ProjectsPage() {
         <Box className="text-center mb-16">
           <Typography
             variant="h2"
-            className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4"
+            className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4!"
           >
-            Selected Projects
+            Featured Projects
           </Typography>
           <Typography
             variant="h6"
-            className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
+            className="text-slate-600 dark:text-slate-400 mx-auto"
           >
-            A collection of things I've built, from AI-powered tools to complex dashboards.
+            A collection of applications I've built, from mobile apps to web applications with complex dashboards.
           </Typography>
         </Box>
 
-        <Grid container spacing={4}>
+        <div className="columns-1 md:columns-2 lg:columns-3">
           {projects.map((project) => (
-            <Grid size={{xs: 12, sm: 6, md: 4}} key={project.id}>
+            <div key={project.title} className="break-inside-avoid mb-8">
               <ProjectCard project={project} />
-            </Grid>
+            </div>
           ))}
-        </Grid>
+        </div>
       </Container>
     </Box>
   );
