@@ -1,20 +1,19 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { IconButton } from "@mui/material";
 import { Sun, Moon } from "lucide-react";
+import { useEffect } from "react";
+
+let didInit = false;
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  // Avoid hydration mismatch by waiting for mount
   useEffect(() => {
-    setMounted(true);
+    if (!didInit) {
+      didInit = true;
+    }
   }, []);
 
-  if (!mounted) {
+  if (!didInit) {
     return <div className="w-10 h-10" />;
   }
 

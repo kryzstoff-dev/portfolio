@@ -1,7 +1,5 @@
-import { CalendarToday, Code, Rocket } from "@mui/icons-material";
-import { Box, Button, Typography } from "@mui/material";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { CalendarToday, Rocket } from "@mui/icons-material";
+import { Typography } from "@mui/material";
 
 function MainSection() {
   return (

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { ThemeProvider as NextThemesProvider, useTheme } from 'next-themes';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import theme from '@/theme';
 

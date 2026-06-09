@@ -19,7 +19,7 @@ export default function ProjectsPage() {
             variant="h6"
             className="text-slate-600 dark:text-slate-400 mx-auto"
           >
-            A collection of applications I've built, from mobile apps to web applications with complex dashboards.
+            A collection of applications I&apos;ve built, from mobile apps to web applications with complex dashboards.
           </Typography>
         </Box>
 

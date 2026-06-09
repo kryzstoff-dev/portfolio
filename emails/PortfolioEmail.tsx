@@ -62,7 +62,7 @@ function PortfolioEmail({
                 💬 Message Details:
               </Text>
               <div className="bg-slate-50 border-l-4 border-teal-500 p-4 text-slate-700 text-[14px] leading-6 italic whitespace-pre-line rounded-r-lg">
-                "{message}"
+                &quot;{message}&quot;
               </div>
             </Section>
 

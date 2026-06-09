@@ -1,6 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
 import ServicesList from "./components/ServicesList";
-import PricingSection from "./components/PricingSection";
 
 export default function ServicesPage() {
   return (

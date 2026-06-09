@@ -3,6 +3,7 @@
 import { Box, Container, Typography, Grid } from "@mui/material";
 import TechStacks from "./components/TechStacks";
 import MyApproachSection from "./components/MyApproachSection";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -12,10 +13,13 @@ export default function AboutPage() {
           <Grid size={{ xs: 12, md: 5 }}>
             <Box className="relative w-full aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 bg-teal-500 rounded-full blur-3xl opacity-20" />
-              <img
+              <Image
                 src="/assets/images/profile.jpg"
                 alt="About Me"
                 className="relative w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white dark:border-slate-700"
+                loading="eager"
+                width={440}
+                height={440}
               />
             </Box>
           </Grid>
@@ -39,7 +43,7 @@ export default function AboutPage() {
               variant="body1"
               className="text-base! lg:text-lg! text-slate-600 dark:text-slate-400 mb-8! leading-relaxed"
             >
-              Over the past five years, I've worked on web and mobile
+              Over the past five years, I&apos;ve worked on web and mobile
               applications ranging from business platforms to production-ready
               mobile solutions. My experience includes React, Next.js, React
               Native, TypeScript, API integration, application modernization,

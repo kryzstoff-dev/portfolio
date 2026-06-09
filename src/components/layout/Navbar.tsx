@@ -32,7 +32,7 @@ export default function Navbar() {
     if (activeRoute !== activeLink) {
       setActiveLink(activeRoute);
     }
-  }, [activeLink, activeRoute]);
+  }, [activeLink, activeRoute, setActiveLink]);
 
   return (
     <AppBar

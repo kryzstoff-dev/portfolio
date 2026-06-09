@@ -19,8 +19,8 @@ export default function ContactPage() {
             variant="h6"
             className="text-sm! md:text-base! text-slate-600 dark:text-slate-400 mx-auto"
           >
-            Whether you're looking for a React developer, frontend specialist,
-            or someone to modernize an existing application, I'd love to hear
+            Whether you&apos;re looking for a React developer, frontend specialist,
+            or someone to modernize an existing application, I&apos;d love to hear
             about your project.
           </Typography>
         </Box>
